@@ -30,3 +30,42 @@ $('.btn-proximo').click(function () {
         console.log('acabouse')
     }
 })
+
+// Aqui você adiciona ou remove os containers pra onde devem ir os cards
+var containers = [
+    // Container com os cards que serão realocados
+    document.querySelector("#cardPile"),  
+    // Containers que irão receber os cards
+    document.querySelector("#slot-1"),
+  ];  
+  var scrollable = true;
+  
+  var listener = function(e) {
+    console.log(scrollable)
+      if (! scrollable) {
+          e.preventDefault();
+      }
+  }
+  
+  document.addEventListener('touchmove', listener, { passive:false });
+  
+  // drag n drop
+  
+  dragula({
+    containers: containers,
+    revertOnSpill: true,
+    direction: 'vertical',
+    accepts: function (el, target, source, sibling) {
+        return el.dataset.target == target.id; 
+    }
+  }).on('drag', function(el, source) {
+    // On mobile this prevents the default page scrolling while dragging an item.
+    scrollable = false;
+  }).on("drop", function(){
+    scrollable = true;    
+    $('.tela-5').fadeOut()
+    setTimeout(()=>{$('.tela-6').fadeIn()}, 500)
+  }).on("cancel", function(){
+    scrollable = true;
+
+  });

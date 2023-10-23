@@ -15,7 +15,7 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
-    margin-bottom: -150px;
+    margin-top: 200px;
 }
 .obj_coord_geo .btn-iniciar:hover {
     background-image: url('../img/bt_iniciar_hv.png');
@@ -36,7 +36,7 @@
 }
 
 .titulo {
-    margin-top: -120px;
+    margin-top: -60px;
     margin-right: 0px;
 }
 
@@ -94,6 +94,11 @@
     margin-left: 30px;
     background-image: url('../img/bt_proximo.png');
 }
+.obj_coord_geo .btn-proximo.disabled, .obj_coord_geo .btn-proximo.disabled:hover {
+    background-image: url('../img/bt_proximo_inativo.png');
+    cursor: default;
+    pointer-events: none;
+}
 .obj_coord_geo .btn-proximo:hover {
     background-image: url('../img/bt_proximo_hv.png');
 }
@@ -129,7 +134,8 @@
     position: absolute;
     height: 80px;
     left: 45%;
-    bottom: 60%;    
+    bottom: 60%;
+    z-index: 10;
 }
 .tela-3 .indio_small.anim {
     animation: indio-1 2s linear forwards;
@@ -137,6 +143,27 @@
 .tela-4 .indio_small.anim {
     animation: indio-2 2s linear forwards;
 }
+.tela-5 #cardPile {
+    position: absolute;
+    left: 28%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+.tela-5 .indio_small {
+    position: static;
+    cursor: grab;
+}
+.obj_coord_geo .tela-5 #slot-1 {
+    background-color: red;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    bottom: 50%;
+    left: 52%;
+    z-index: 11;
+}
+/* animacoes */
 @keyframes indio-1 {
     0%{
         bottom: 60%;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objeto - Coordenação geografica</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/dragula.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
@@ -26,7 +27,7 @@
                     </div> -->
                     <!-- <img src="assets/img/indio_small.png" alt="" class="indio_small"> -->
                     <div class="col-lg-12 col-xs-12">
-                        <img src="assets/img/globo_coordenadas.png" alt="" class="globo">
+                        <img src="assets/img/globo.png" alt="" class="globo">
                     </div>
                 </div>
                 <div class="dialog">
@@ -91,8 +92,9 @@
             <div class="tela tela-5">
                 <div class="row">
                     <div class="col-lg-12">
+                        <div id="cardPile"><img data-target="slot-1" src="assets/img/indio_small.png" alt="" class="indio_small"></div>
                         <img src="assets/img/globo.png" class="globo-2" alt="">
-                        <img src="assets/img/indio_small.png" alt="" class="indio_small">
+                        <div id="slot-1"></div>
                         <img src="assets/img/globo_paralelos.png" alt="" class="img_paralelos">
                         <img src="assets/img/globo_meridianos.png" alt="" class="img_meridianos">
                     </div>
@@ -104,7 +106,7 @@
                             Clique no círculo vermelho para ver a localização de parte do território indígena Menkragnoti, 8°S de latitude e 54° oeste, abrangendo, em sua totalidade, parte do estado do Mato Grosso e parte do estado do Pará.</p>
                         </div>
                         <div class="col-lg-2">
-                            <button class="btn-proximo proximo-1">
+                            <button class="btn-proximo disabled">
                             </button>
                         </div>
                     </div>
@@ -115,6 +117,7 @@
 
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/dragula.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
