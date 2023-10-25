@@ -40,7 +40,7 @@
     margin-right: 0px;
 }
 
-.obj_coord_geo .tela-2, .obj_coord_geo .tela-3, .obj_coord_geo .tela-4, .obj_coord_geo .tela-5 {
+.obj_coord_geo .tela-2, .obj_coord_geo .tela-3, .obj_coord_geo .tela-4, .obj_coord_geo .tela-5, .obj_coord_geo .tela-6 {
     height: 100%;
     width: 100%;
     background-image: url('../img/bg_horizontal.png');
@@ -163,6 +163,19 @@
     left: 52%;
     z-index: 11;
 }
+
+.obj_coord_geo .tela-6 iframe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    border-radius: 10px;
+    z-index: 15;
+    width: 600px;
+    height: 450px;
+}
+
 /* animacoes */
 @keyframes indio-1 {
     0%{
