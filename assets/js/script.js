@@ -56,6 +56,13 @@ $('.btn-anterior').click(function () {
     }
 })
 
+$('.btn-reiniciar').click(function(){
+    $('.tela').fadeOut()
+    setTimeout(() => {
+        $('.tela-1').fadeIn()
+    }, 500);
+})
+
 // Aqui você adiciona ou remove os containers pra onde devem ir os cards
 var containers = [
     // Container com os cards que serão realocados
