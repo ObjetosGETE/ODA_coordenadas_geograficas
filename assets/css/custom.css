@@ -104,6 +104,27 @@
 .obj_coord_geo .btn-proximo:hover {
     background-image: url('../img/bt_proximo_hv.png');
 }
+.obj_coord_geo .btn-anterior {
+    background-color: transparent;
+    border: none;
+    height: 71px;
+    width: 71px;
+    margin: 10px;
+    margin-left: auto;
+    display: block;
+    background-image: url('../img/bt_proximo.png');
+    transform: scaleX(-1);
+}
+.obj_coord_geo .btn-anterior.disabled, .obj_coord_geo .btn-anterior.disabled:hover {
+    background-image: url('../img/bt_proximo_inativo.png');
+    cursor: default;
+    pointer-events: none;
+    transform: scaleX(-1);
+}
+.obj_coord_geo .btn-anterior:hover {
+    background-image: url('../img/bt_proximo_hv.png');
+    transform: scaleX(-1);
+}
 .obj_coord_geo .indio_big {
     display: block;
     margin: auto;
